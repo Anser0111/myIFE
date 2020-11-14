@@ -1,0 +1,6 @@
+.leftblock {
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    background-color: rgb(29, 37, 49);
+}
