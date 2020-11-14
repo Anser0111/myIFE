@@ -1,0 +1,568 @@
+header {
+  /*第一部分大页面*/
+  width: 100%;
+  height: 990px;
+  text-align: center;
+  color: white;
+  background-image: url(background/Background1.png);
+  background-size: 100% 100%;
+}
+
+h1 {
+  /*标题*/
+  position: relative;
+  top: 200px;
+  font-size: 50px;
+}
+
+.brief {
+  /*标题下面的一下段话*/
+  position: relative;
+  top: 280px;
+  width: 800px;
+  margin: 0 auto;
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.login {
+  /*登录框*/
+  position: relative;
+  top: 380px;
+  height: 250px;
+  width: 970px;
+  margin: 0 auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px; /*边框圆角*/
+}
+
+.creatcount {
+  /*登录框标题*/
+  position: relative;
+  top: 60px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.free {
+  /*登录框副标题*/
+  position: relative;
+  top: 75px;
+  opacity: 0.6;
+  font-size: 12px;
+}
+
+.account1 {
+  /*用户名输入框*/
+  position: relative;
+  top: 115px;
+  right: 239px;
+  width: 292px;
+  margin: 0 auto;
+  line-height: 300%;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.input1 {
+  /*用户名输入内容*/
+  position: relative;
+  right: 20px;
+}
+
+.password1 {
+  /*密码输入框*/
+  position: relative;
+  top: 65px;
+  left: 80px;
+  width: 292px;
+  margin: 0 auto; /*使用宽度后，父类居中出现问题，需要添加此行*/
+  line-height: 300%;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.input2 {
+  /*密码输入内容*/
+  position: relative;
+  right: 40px;
+  opacity: 0.6;
+}
+
+.signup {
+  /*白色按钮*/
+  position: relative;
+  top: 15px;
+  left: 320px;
+  width: 125px;
+  margin: 0 auto;
+  line-height: 300%;
+  color: black;
+  background-color: rgba(255, 255, 255, 1);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+.number2 {
+  /*第二部分大页面*/
+  width: 100%;
+  height: 710px;
+  text-align: center;
+}
+
+.smalltitle {
+  /*小标题*/
+  position: relative;
+  top: 90px;
+  font-size: 14px;
+}
+
+.readymade {
+  /*大标题*/
+  position: relative;
+  top: 130px;
+  width: 800px;
+  margin: 0 auto;
+  font-size: 42px;
+}
+
+.number2block1 {
+  /*第一块*/
+  position: relative;
+  top: 212px;
+  right: 300px;
+  width: 420px;
+  margin: 0 auto;
+  height: 120px;
+}
+
+.number2img {
+  /*number2中图片通用*/
+  position: relative;
+  top: 10px;
+  right: 160px;
+}
+
+.imgtitle {
+  /*number2中图片标题通用*/
+  position: relative;
+  bottom: 40px;
+  right: 25px;
+  width: 200px; /*设置左右对齐的时候要有宽度*/
+  margin: 0 auto; /*有了宽度时维持盒子居中*/
+  text-align: left;
+}
+
+.imgcontent {
+  /*number2中图片内容通用*/
+  position: relative;
+  bottom: 20px;
+  left: 65px;
+  width: 380px;
+  margin: 0 auto;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.number2block2 {
+  /*第二块*/
+  position: relative;
+  top: 100px;
+  left: 270px;
+}
+
+.number2block3 {
+  /*第三块*/
+  position: relative;
+  top: 150px;
+  right: 300px;
+}
+
+.number2block4 {
+  /*第四块*/
+  position: relative;
+  top: 50px;
+  left: 270px;
+}
+
+.number3 {
+  /*第三部分大界面*/
+  width: 100%;
+  height: 800px;
+  text-align: center;
+  background-image: url(background/Background2.png);
+  background-size: 100% 100%;
+}
+
+.number3title {
+  /*第三部分标题*/
+  position: relative;
+  top: 184px;
+  right: 250px;
+  width: 420px;
+  margin: 0 auto;
+  font-size: 42px;
+  text-align: left;
+  color: white;
+}
+
+.number3content {
+  /*第三部分内容*/
+  position: relative;
+  top: 207px;
+  right: 250px;
+  width: 420px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.checkout {
+  /*按钮1*/
+  position: relative;
+  top: 258px;
+  right: 340px;
+  width: 240px;
+  margin: 0 auto;
+  line-height: 400%;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 1);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.tryproduct {
+  /*按钮2*/
+  position: relative;
+  top: 208px;
+  right: 60px;
+  width: 240px;
+  margin: 0 auto;
+  line-height: 400%;
+  font-size: 12px;
+  color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.ipad {
+  /*整个ipad*/
+  position: absolute;
+  right: 0px;
+  top: 1850px;
+}
+
+.circle {
+  position: relative;
+  top: 300px;
+  left: 30px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.ipadborder {
+  /*ipad边框*/
+  padding: 30px 0px 30px 50px;
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-radius: 20px 0px 0px 20px;
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.number4 {
+  /*第四块*/
+  width: 100%;
+  height: 580px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.number4title {
+  /*大标题*/
+  position: relative;
+  top: 100px;
+  font-size: 42px;
+}
+
+.number4block {
+  /*大块内容*/
+  position: relative;
+  top: 150px;
+  height: 300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.number4text {
+  /*每个小块*/
+  display: inline-block;
+  width: 270px;
+  margin: 0px 40px 0px 40px;
+}
+
+.number5 {
+  /*第五大块*/
+  width: 100%;
+  height: 1000px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.number5main {
+  /*第五大块的内容*/
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.number5block {
+  /*第五大块的两部分*/
+  height: 350px;
+  margin: 120px 80px 0 80px;
+}
+
+.number5img1 {
+  float: left;
+  margin-right: 100px;
+}
+
+.number5img2 {
+  float: right;
+  margin-left: 100px;
+}
+
+.number5title {
+  position: relative;
+  top: 40px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.number5content {
+  position: relative;
+  top: 40px;
+  font-size: 16px;
+  text-align: left;
+  line-height: 200%;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.number6 {
+  height: 1085px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.number6title {
+  position: relative;
+  top: 100px;
+  font-size: 42px;
+}
+
+.number6sub {
+  position: relative;
+  top: 135px;
+  width: 710px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.number6content {
+  position: relative;
+  top: 175px;
+  width: 1200px;
+  margin: 0 auto;
+  height: 770px;
+}
+
+.person {
+  margin: 20px;
+}
+
+.layer {
+  position: absolute;
+  left: 108px;
+  top: 20px;
+  display: none;
+}
+
+.picbox:hover .layer {
+  display: block;
+}
+
+.number7 {
+  height: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.writeblock {
+  position: relative;
+  top: 70px;
+  right: 70px;
+  height: 560px;
+  width: 470px;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.number7title1 {
+  position: relative;
+  top: 50px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.email {
+  position: relative;
+  top: 80px;
+  width: 370px;
+  margin: 0 auto;
+  line-height: 300%;
+  text-align: left;
+  text-indent: 20px;
+  font: 14px;
+  color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.subject {
+  position: relative;
+  top: 110px;
+  width: 370px;
+  margin: 0 auto;
+  line-height: 300%;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: left;
+  text-indent: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.message {
+  position: relative;
+  top: 140px;
+  width: 370px;
+  height: 150px;
+  margin: 0 auto;
+  line-height: 300%;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: left;
+  text-indent: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.send {
+  position: relative;
+  top: 170px;
+  width: 370px;
+  margin: 0 auto;
+  line-height: 400%;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  background-color: black;
+}
+
+.number7block {
+  position: relative;
+  display: inline-block;
+  top: 140px;
+  left: 80px;
+  width: 380px;
+  text-align: left;
+}
+
+.number7title2 {
+  font-size: 42px;
+}
+
+.number7sub {
+  position: relative;
+  top: 30px;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.number7img {
+  position: relative;
+  top: 100px;
+}
+
+.number7imgtext {
+  display: inline-block;
+  position: relative;
+  margin: 0px 20px 40px 10px;
+}
+
+footer {
+  height: 410px;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(20, 20, 20);
+}
+
+.footercontent1 {
+  position: relative;
+  display: inline-block;
+  right: 160px;
+  height: 230px;
+  width: 300px;
+  margin: 60px 20px 40px 20px;
+  text-align: left;
+  line-height: 300%;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+h4 {
+  color: white;
+  letter-spacing: 2px;
+}
+
+.footercontent2 {
+  position: relative;
+  bottom: 260px;
+  left: 480px;
+  height: 230px;
+  width: 300px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+.specialcontent {
+  position: relative;
+  top: 30px;
+  left: 2px;
+  line-height: 150%;
+}
+
+.special {
+  position: relative;
+  top: 70px;
+  left: 2px;
+}

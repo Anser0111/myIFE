@@ -1,0 +1,37 @@
+<style>
+  .wrap {
+    border: 1px solid blue;
+    width: 600px;
+    margin: 30px auto 5px;
+    background: #f5f5f5;
+  }
+  div {
+    padding: 15px 20px;
+    font-size: 14px;
+    color: #333;
+  }
+  div {
+    display: block;
+  }
+  .main {
+    height: 60px;
+    width: 50%;
+    background: #ffe3d7;
+  }
+  .side {
+    width: 20%;
+    background: lightblue;
+  }
+  .left {
+    float: left;
+}
+.clearfix:after {content:"."; display:block; height:0; visibility:hidden; clear:both; }
+</style>
+<body>
+  <div class="wrap clearfix">
+    <div class="main left">
+      .main：很抱歉，现代浏览器中我没能把wrap撑高(float:left)
+    </div>
+    <div class="side left">.side：我也浮动了(float:left)</div>
+  </div>
+</body>

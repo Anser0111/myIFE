@@ -1,0 +1,46 @@
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    width: 1200px;
+    margin: auto;
+}
+
+.nav {
+    /* position: relative; */
+    float: left;
+    width: 200px;
+    height: 750px;
+    text-align: center;
+    background-color: #75a5f4;
+    color: white;
+}
+
+.nav h1 {
+    margin: 60px;
+}
+
+.main {
+    float: left;
+    height: 700px;
+    padding: 0px 30px;
+}
+.info {
+    display: flex;
+}
+
+.info p {
+    padding-right: 2em;
+}
+.info p span {
+    font-weight: 700;
+}
+.br {
+    font-weight: 700;
+}
+
+.titleInfo {
+    margin: 20px 0px;
+}
