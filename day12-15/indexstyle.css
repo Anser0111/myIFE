@@ -24,3 +24,46 @@
 .leftblockbottomimg {
     margin: 0px 5px;
 }
+
+.leftblock2 {
+    position: absolute;
+    left: 100px;
+    height: 100%;
+    width: 250px;
+    background-color:  rgb(34, 44, 60);
+}
+
+.leftblock2content {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.littletitle {
+    margin: 30px 30px 25px 30px;
+}
+
+.littletitlewords {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+}
+
+.littletitleimg {
+    position: absolute;
+    right: 25px;
+}
+
+.option {
+    margin: 0px 30px 20px 30px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.leftblock2bottom {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+}
+
+.leftblock2bottomwords {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
