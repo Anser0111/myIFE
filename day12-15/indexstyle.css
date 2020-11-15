@@ -67,3 +67,53 @@
     color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
 }
+
+.topblock {
+    position: absolute;
+    left: 350px;
+    height: 80px;
+    width: 100%;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.topwords {
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+.topblockright {
+    position: absolute;
+    right: 380px;
+    width: 200px;
+}
+
+.topimg1 {
+    position: relative;
+    bottom: 10px;
+    float: left;
+}
+
+.topimg2 {
+    position: relative;
+    bottom: 20px;
+    float: right;
+}
+
+.topblockrightcontent1 {
+    font-size: 16px;
+    color: rgb(35, 153, 241);
+    margin-bottom: 5px;
+}
+
+.topblockrightcontent2 {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.topblockrightcontent {
+    position: relative;
+    left: 20px;
+}
