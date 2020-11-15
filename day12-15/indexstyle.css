@@ -4,3 +4,23 @@
     width: 100px;
     background-color: rgb(29, 37, 49);
 }
+
+.leftblocktop {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.leftblocktopimg {
+    margin: 5px 0px;
+}
+
+.leftblockbottom {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.leftblockbottomimg {
+    margin: 0px 5px;
+}
