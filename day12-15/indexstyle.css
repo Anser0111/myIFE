@@ -118,3 +118,35 @@
     position: relative;
     left: 20px;
 }
+
+.content1 {
+    position: absolute;
+    left: 350px;
+    top: 80px;
+    width: 400px;
+
+    height: calc(100% - 80px);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.search {
+    position: relative;
+    top: 16px;
+    left: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.4);
+    text-indent: 10px;
+    width: 340px;
+    height: 36px;
+}
+
+.content1topsearch {
+    height: 70px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.searchicon {
+    position: relative;
+    top: 20px;
+}
