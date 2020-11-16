@@ -1,215 +1,291 @@
 .leftblock {
-    position: absolute;
-    height: 100%;
-    width: 100px;
-    background-color: rgb(29, 37, 49);
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  background-color: rgb(29, 37, 49);
 }
 
 .leftblocktop {
-    position: absolute;
-    left: 20px;
-    top: 20px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
 }
 
 .leftblocktopimg {
-    margin: 5px 0px;
+  margin: 5px 0px;
 }
 
 .leftblockbottom {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
 .leftblockbottomimg {
-    margin: 0px 5px;
+  margin: 0px 5px;
 }
 
 .leftblock2 {
-    position: absolute;
-    left: 100px;
-    height: 100%;
-    width: 250px;
-    background-color:  rgb(34, 44, 60);
+  position: absolute;
+  left: 100px;
+  height: 100%;
+  width: 250px;
+  background-color: rgb(34, 44, 60);
 }
 
 .leftblock2content {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .littletitle {
-    margin: 30px 30px 25px 30px;
+  margin: 30px 30px 25px 30px;
 }
 
 .littletitlewords {
-    color: rgba(255, 255, 255, 0.2);
-    font-size: 12px;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
 }
 
 .littletitleimg {
-    position: absolute;
-    right: 25px;
+  position: absolute;
+  right: 25px;
 }
 
 .option {
-    margin: 0px 30px 20px 30px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
+  margin: 0px 30px 20px 30px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
 }
 
 .leftblock2bottom {
-    position: absolute;
-    left: 30px;
-    bottom: 20px;
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
 }
 
 .leftblock2bottomwords {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
 }
 
 .topblock {
-    position: absolute;
-    left: 350px;
-    height: 80px;
-    width: calc(100% - 350px);
-    font-size: 24px;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-    color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 350px;
+  height: 80px;
+  width: calc(100% - 350px);
+  font-size: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .topwords {
-    position: relative;
-    top: 30px;
-    left: 30px;
+  position: relative;
+  top: 30px;
+  left: 30px;
 }
 
 .topblockright {
-    position: absolute;
-    right: 30px;
-    width: 200px;
-    z-index: -1;
+  position: absolute;
+  right: 30px;
+  width: 200px;
+  z-index: -1;
 }
 
 .topimg1 {
-    position: relative;
-    bottom: 10px;
-    float: left;
+  position: relative;
+  bottom: 10px;
+  float: left;
 }
 
 .topimg2 {
-    position: relative;
-    bottom: 20px;
-    float: right;
+  position: relative;
+  bottom: 20px;
+  float: right;
 }
 
 .topblockrightcontent1 {
-    font-size: 16px;
-    color: rgb(35, 153, 241);
-    margin-bottom: 5px;
+  font-size: 16px;
+  color: rgb(35, 153, 241);
+  margin-bottom: 5px;
 }
 
 .topblockrightcontent2 {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .topblockrightcontent {
-    position: relative;
-    left: 20px;
+  position: relative;
+  left: 20px;
 }
 
 .content1 {
-    position: absolute;
-    left: 350px;
-    top: 80px;
-    width: 400px;
-    height: calc(100% - 80px);
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    overflow: hidden;/*自动修剪不提供滚动条*/
+  position: absolute;
+  left: 350px;
+  top: 80px;
+  width: 400px;
+  height: calc(100% - 80px);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  overflow: hidden; /*自动修剪不提供滚动条*/
 }
 
 .search {
-    position: relative;
-    top: 16px;
-    left: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    color: rgba(0, 0, 0, 0.4);
-    text-indent: 10px;
-    width: 340px;
-    height: 36px;
+  position: relative;
+  top: 16px;
+  left: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.4);
+  text-indent: 10px;
+  width: 340px;
+  height: 36px;
 }
 
 .content1top {
-    height: 70px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: 70px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .searchicon {
-    position: relative;
-    top: 20px;
+  position: relative;
+  top: 20px;
 }
 
 .content1bottom {
-    height: calc(100% - 70px);
-    position: relative;
+  height: calc(100% - 70px);
+  position: relative;
 }
 
 .content1img {
-    position: absolute;
-    top: 16px;
-    left: 30px;
+  position: absolute;
+  top: 16px;
+  left: 30px;
 }
 
 .status {
-    position: absolute;
-    top: 25px;
-    left: 100px;
+  position: absolute;
+  top: 25px;
+  left: 100px;
 }
 
 .content1word1 {
-    position: absolute;
-    top: 20px;
-    left: 115px;
-    font-size: 16px;
-    color: rgb(35, 153, 241);
+  position: absolute;
+  top: 20px;
+  left: 115px;
+  font-size: 16px;
+  color: rgb(35, 153, 241);
 }
 
 .content1word2 {
-    position: absolute;
-    top: 40px;
-    left: 100px;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .content1word3 {
-    position: absolute;
-    top: 80px;
-    padding: 0px 50px 0px 30px;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 80px;
+  padding: 0px 50px 0px 30px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .content1word4 {
-    position: absolute;
-    top: 22px;
-    right: 20px;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .content1person {
-    position: relative;
-    height: 130px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: 130px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .content1word1commom {
-    position: absolute;
-    top: 20px;
-    left: 100px;
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.content2 {
+  position: absolute;
+  left: 750px;
+  top: 80px;
+  width: calc(100% - 750px);
+  height: calc(100% - 80px);
+  overflow: hidden; /*自动修剪且不提供滚动条*/
+}
+
+.content2top {
+  height: 70px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.content2topmain {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.content2topmainimg {
+  position: absolute;
+  top: 30px;
+  left: 135px;
+}
+
+.button {
+  position: absolute;
+  height: 32px;
+  width: 36px;
+  top: 16px;
+  background: linear-gradient(to bottom, #ffffff, 40%, #f5f5f5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.content2topsup {
+  position: absolute;
+  right: 105px;
+  top: 26px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.button4 {
+  right: 50px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.button5 {
+  right: 14px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.button3 {
+  right: 195px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.button2 {
+  right: 231px;
+}
+
+.button1 {
+  right: 267px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.special {
+    margin-top: 20px;
 }
