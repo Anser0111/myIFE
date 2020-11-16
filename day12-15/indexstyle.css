@@ -195,12 +195,21 @@
 .content1word4 {
     position: absolute;
     top: 22px;
-    right: 40px;
+    right: 20px;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.4);
 }
 
 .content1person {
+    position: relative;
     height: 130px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.content1word1commom {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
 }
