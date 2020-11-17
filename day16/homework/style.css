@@ -53,11 +53,14 @@ h2 {
 }
 
 #special {
-    margin: 10px;
-    font-size: 20px;
+  font-size: 20px;
 }
 
 #specialcontent {
-    margin: 0px 0px 0px 10px;
-    font-size: 30px;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.specialdiv {
+  text-align: center;
 }
