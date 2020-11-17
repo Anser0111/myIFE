@@ -1,0 +1,44 @@
+* {
+  text-align: center;
+}
+body {
+  background: #e0e0e0 url(bgimage.gif) no-repeat fixed top;
+  background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1602828505989&di=27c04a1c336021074a520e42f0a7821a&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fback_pic%2F00%2F01%2F88%2F75%2Ff0c33ad1741c2dbe39d168061ec86de9.jpg);
+  background-repeat: repeat-x;
+  background-position: center;
+}
+h1 {
+  font-size: 32px;
+  background-color: #a0a0a0;
+}
+p {
+  color: orange;
+  font-weight: normal;
+  border-style: solid;
+  border-width: 2px;
+  border-color: solid;
+}
+dd {
+  color: rebeccapurple;
+}
+dt {
+  font-size: 18px;
+}
+ul.circle {
+  list-style-type: circle;
+}
+ul.square {
+  list-style-type: square;
+}
+a:link {
+  color: #ff0000;
+} /* 未被访问的链接 */
+a:visited {
+  color: blue;
+} /* 已被访问的链接 */
+a:hover {
+  color: #ff00ff;
+} /* 鼠标指针移动到链接上 */
+a:active {
+  color: blue;
+} /* 正在被点击的链接 */

@@ -1,0 +1,16 @@
+* {
+  text-align: center;
+}
+h1 {
+  font-size: 32px;
+}
+p {
+  color: orange;
+  font-weight: normal;
+}
+dd {
+  color: rebeccapurple;
+}
+dt {
+  font-size: 18px;
+}
