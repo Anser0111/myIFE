@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>IFE ECMAScript</title>
+  </head>
+  <body>
+    <input id="dec-number" type="number" placeholder="输入一个十进制非负整数" />
+    <input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数" />
+    <button id="trans-btn">转化为二进制</button>
+    <p id="result">运算结果</p>
+    <script>
+      var btn = document.getElementById("trans-btn");
+      var x1 = document.getElementById("dec-number").value;
+      var result;
+      function dec2bin(decNumber) {
+        if (decNumber >= 0 && decNumber - Math.floor(decNumber) === 0) {
+          result = decNumber.toString(2);
+          var binbit = document.getElementById("bin-bit").value;
+          while (result.length < Number(binbit)) {
+            result = "0" + result;
+          }
+          if (result.length > Number(binbit)) {
+            var baocuo = "错误：输入的位数小于转换后二进制数的位数!"
+            console.log(baocuo);
+          }
+          return result;
+        } else {
+          return "错误：输入的不是非负整数！";
+        }
+      }
+      btn.onclick = function () {
+        x1 = Number(document.getElementById("dec-number").value);
+        document.getElementById("result").innerHTML = dec2bin(x1);
+        // 相对于index1。新的需求是，转化显示后的二进制数为bin-bit中输入的数字宽度，例如
+        // dec-number为5，bin-bit为5，则转化后数字为00101
+        // 如果bin-bit小于转化后的二进制本身位数，则使用原本的位数，如dec-number为5，bin-bit为2，依然输出101，但同时在console中报个错
+        // 另一方面，输入时会判断输入的是否是非负整数。
+      };
+    </script>
+  </body>
+</html>
