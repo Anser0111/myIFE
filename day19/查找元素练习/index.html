@@ -40,14 +40,34 @@
       }
 
       function findAllHtmlSpanInOneSection(sectionId) {
+        let spans = document
+          .getElementById(sectionId)
+          .getElementsByTagName("span");
+        for (let i = 0; i < spans.length; i++) {
+          if (spans[i].innerHTML === "HTML") {
+            console.log(spans[i]);
+          }
+        }
         // 返回某个section下所有span中内容为HTML的span标签
       }
 
       function findListItem(sectionId, spanCont) {
+        let lis = document.getElementById(sectionId).getElementsByTagName("li");
+        for (let i = 0; i < lis.length; i++) {
+          if (lis[i].getElementsByTagName("span")[0].textContent == spanCont) {
+            console.log(lis[i]);
+          }
+        }
         // 返回某个section下，所有所包含span内容为spanCont的LI标签
       }
 
       function getActiveLinkContent(sectionId) {
+        let as = document.getElementById(sectionId).getElementsByTagName("a");
+        for (let i = 0; i < as.length; i++) {
+          if (as[i].className == "active") {
+            console.log(as[i].textContent)
+          }
+        }
         // 返回某个section下，class为active的链接中包含的文字内容
       }
     </script>
