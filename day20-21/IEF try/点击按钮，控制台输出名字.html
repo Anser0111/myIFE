@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <input id="name" type="text" />
+    <button id="submit-btn">Submit</button>
+    <script>
+        var btn = document.getElementById("submit-btn");
+        btn.onclick = function() {
+            var name = document.getElementById("name").value;
+            console.log(name);
+        }
+    </script>
+  </body>
+</html>

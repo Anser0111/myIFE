@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <style>
+      .style1 {
+        margin: 10px auto;
+        background-color: #9999ff;
+        display: block;
+        color: White;
+        border: 1px solid white;
+        padding: 10px 25px;
+        font-size: 18px;
+      }
+
+      .style1:hover {
+        background-color: #66b3ff;
+        cursor: pointer;
+      }
+
+      .style2 {
+        margin: 10px auto;
+        background-color: gray;
+        display: block;
+        color: black;
+        border: 1px solid white;
+        padding: 10px 25px;
+        font-size: 18px;
+      }
+
+      .style2:hover {
+        background-color: black;
+        color: White;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input
+        id="btnB"
+        type="button"
+        name="btnLogin"
+        value="登录"
+        class="style1"
+      />
+      <div id="tool">
+        <input
+          type="button"
+          value="【obj.style.className】更改样式"
+          onclick="changeBackgroundColor()"
+        />
+        <input
+          type="button"
+          value="【obj.style.cssText】更改样式"
+          onclick="changeFontSize()"
+        />
+        <input
+          type="button"
+          value="【obj.className】更改样式"
+          onclick="addRadius()"
+        />
+        <input type="button" value="更改外联css样式" onclick="recover()" />
+      </div>
+    </div>
+    <script>
+      function changeBackgroundColor() {
+        var obj = document.getElementById("btnB");
+        obj.style.backgroundColor = "black";
+      }
+      function changeFontSize() {
+        var obj = document.getElementById("btnB");
+        obj.style.cssText = " display:block;color:Red";
+      }
+      function addRadius() {
+        var obj = document.getElementById("btnB");
+        //obj.className = "style2";
+        obj.setAttribute("class", "style2");
+      }
+    </script>
+  </body>
+</html>
