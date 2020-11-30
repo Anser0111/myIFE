@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .abox {
+        height: 480px;
+        width: 480px;
+        background-image: url(image/smile.jpg);
+        background-position: 0px 0px;
+        background-repeat: repeat-y;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="abox"></div>
+    <script>
+      let xwyc = 0;
+      let i = 0;
+      function donghua() {
+        let abox = document.querySelector("div");
+        if (Math.floor(i / 16) % 2 == 0) {
+          abox.style.backgroundPosition = "0px " + String(xwyc) + "px";
+          xwyc = xwyc - 480;
+          i = i + 1;
+        } else {
+          xwyc = xwyc + 480;
+          abox.style.backgroundPosition = "0px " + String(xwyc) + "px";
+          i = i + 1;
+        }
+      }
+      setInterval("donghua()", 100);
+    </script>
+  </body>
+</html>
