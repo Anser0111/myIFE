@@ -1,0 +1,42 @@
+<html>
+  <body>
+    <input id="queue-input" type="text" />
+    <p id="queue-cont">队列内容：apple&lt;-pear</p>
+    <button id="in-btn">入队</button>
+    <button id="out-btn">出队</button>
+    <button id="font-btn">打印队头元素内容</button>
+    <button id="empty-btn">判断队列是否为空</button>
+
+    <script>
+      var queue = ["apple", "pear"];
+      let input = document.getElementById("queue-input");
+      let p = document.getElementById("queue-cont");
+      let btn1 = document.getElementById('in-btn');
+      let btn2 = document.getElementById('out-btn');
+      let btn3 = document.getElementById('font-btn');
+      let btn4 = document.getElementById('empty-btn');
+      btn1.onclick = function () {
+        queue.unshift(input.value);
+        let result = queue.join("<-");
+        p.textContent = "队列内容：" + result;
+      }
+      btn2.onclick = function () {
+        queue.pop();
+        let result = queue.join("<-");
+        p.textContent = "队列内容：" + result;
+      }
+      btn3.onclick = function () {
+        result = queue[0];
+        p.textContent = "队头元素内容为：" + result;
+      }
+      btn4.onclick = function () {
+        if (queue.length == 0) {
+          p.textContent = "队列为空";
+        } else {
+          p.textContent = "队列不为空";
+        }
+
+      }
+    </script>
+  </body>
+</html>

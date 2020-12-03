@@ -1,0 +1,158 @@
+<html>
+  <body>
+    <div>
+      <label
+        >String A:
+        <input
+          id="radio-a"
+          type="radio"
+          checked="true"
+          name="str-obj"
+          value="a"
+        />
+      </label>
+      <textarea id="str-a"></textarea>
+      <label
+        >String B:
+        <input id="radio-b" type="radio" name="str-obj" value="b" />
+      </label>
+      <textarea id="str-b"></textarea>
+      <label>Num A：<input id="num-a" type="number" value="0" /></label>
+      <label>Num B：<input id="num-b" type="number" value="1" /></label>
+    </div>
+    <div>
+      <button>获取当前选中输入的内容长度</button>
+      <button>当前选中输入中的第3个字符</button>
+      <button>把两个输入框的文字连接在一起输出（concat）</button>
+      <button>输入B中的内容，在输入A的内容中第一次出现的位置（indexOf）</button>
+      <button>
+        输入A中的内容，在输入B的内容中最后一次出现的位置（lastIndexOf）
+      </button>
+      <button>使用slice获取选中输入框内容的部分内容，参数为num-a及num-b</button>
+      <button>当前选中输入框的行数</button>
+      <button>
+        使用substr获取选中输入框内容的子字符串，参数为num-a及num-b
+      </button>
+      <button>把所选输入框中的内容全部转为大写</button>
+      <button>把所选输入框中的内容全部转为小写</button>
+      <button>把所选输入框中内容的半角空格全部去除</button>
+      <button>把所选输入框中内容的a全部替换成另外一个输入框中的内容</button>
+    </div>
+    <p id="result"></p>
+    <script>
+      let x1 = document.querySelector("button:nth-child(1)");
+      let x2 = document.querySelector("button:nth-child(2)");
+      let x3 = document.querySelector("button:nth-child(3)");
+      let x4 = document.querySelector("button:nth-child(4)");
+      let x5 = document.querySelector("button:nth-child(5)");
+      let x6 = document.querySelector("button:nth-child(6)");
+      let x7 = document.querySelector("button:nth-child(7)");
+      let x8 = document.querySelector("button:nth-child(8)");
+      let x9 = document.querySelector("button:nth-child(9)");
+      let x10 = document.querySelector("button:nth-child(10)");
+      let x11 = document.querySelector("button:nth-child(11)");
+      let x12 = document.querySelector("button:nth-child(12)");
+      let lab1 = document.getElementById("radio-a");
+      let ta1 = document.getElementById("str-a");
+      let lab2 = document.getElementById("radio-b");
+      let ta2 = document.getElementById("str-b");
+      let int1 = document.getElementById("num-a");
+      let int2 = document.getElementById("num-b");
+      let p = document.querySelector("p");
+      x1.onclick = function () {
+        //获取当前选中输入的内容长度
+        if (lab1.checked == true) {
+          p.textContent = ta1.value.length;
+        }
+        if (lab2.checked == true) {
+          p.textContent = ta2.value.length;
+        }
+      };
+      x2.onclick = function () {
+        //当前选中输入中的第3个字符
+        if (lab1.checked == true) {
+          p.textContent = ta1.value[2];
+        }
+        if (lab2.checked == true) {
+          p.textContent = ta2.value[2];
+        }
+      };
+      x3.onclick = function () {
+        //把两个输入框的文字连接在一起输出（concat）
+        let sum = "";
+        p.textContent = sum.concat(ta1.value, ta2.value);
+      };
+      x4.onclick = function () {
+        //输入B中的内容，在输入A的内容中第一次出现的位置（indexOf）
+        p.textContent = ta2.value.indexOf(ta1.value);
+      };
+      x5.onclick = function () {
+        //输入A中的内容，在输入B的内容中最后一次出现的位置（lastIndexOf）
+        p.textContent = ta1.value.lastIndexOf(ta2.value);
+      };
+      x6.onclick = function () {
+        //使用slice获取选中输入框内容的部分内容，参数为num-a及num-b
+        if (lab1.checked == true) {
+          p.textContent = ta1.value.slice(int1.value, int2.value);
+        }
+        if (lab2.checked == true) {
+          p.textContent = ta2.value.slice(int1.value, int2.value);
+        }
+      };
+      x7.onclick = function () {
+        //当前选中输入框的行数
+        if (lab1.checked == true) {
+          p.textContent = ta1.value.split(/\r?\n/).length;
+        }
+        if (lab2.checked == true) {
+          p.textContent = ta2.value.split(/\r?\n/).length;
+        }
+      };
+      x8.onclick = function () {
+        //使用substr获取选中输入框内容的子字符串，参数为num-a及num-b
+        if (lab1.checked == true) {
+          p.textContent = ta1.value.substr(int1.value, int2.value);
+        }
+        if (lab2.checked == true) {
+          p.textContent = ta2.value.substr(int1.value, int2.value);
+        }
+      };
+      x9.onclick = function () {
+        //把所选输入框中的内容全部转为大写
+        if (lab1.checked == true) {
+          p.textContent = ta1.value.toUpperCase();
+        }
+        if (lab2.checked == true) {
+          p.textContent = ta2.value.toUpperCase();
+        }
+      };
+      x10.onclick = function () {
+        //把所选输入框中的内容全部转为小写
+        if (lab1.checked == true) {
+          p.textContent = ta1.value.toLowerCase();
+        }
+        if (lab2.checked == true) {
+          p.textContent = ta2.value.toLowerCase();
+        }
+      };
+      x11.onclick = function () {
+        //把所选输入框中内容的半角空格全部去除
+        if (lab1.checked == true) {
+          p.textContent = ta1.value.replace(/\s+/g, "");
+        }
+        if (lab2.checked == true) {
+          p.textContent = ta2.value.replace(/\s+/g, "");
+        }
+      };
+      x12.onclick = function () {
+        //把所选输入框中内容的a全部替换成另外一个输入框中的内容
+        if (lab1.checked == true) {
+          p.textContent = ta1.value.replace(ta1.value, ta2.value);
+        }
+        if (lab2.checked == true) {
+          p.textContent = ta2.value.replace(ta2.value, ta1.value);
+        }
+      };
+    </script>
+  </body>
+</html>
