@@ -1,0 +1,75 @@
+<html>
+  <body>
+    <script>
+      //从小到大
+      var arr1 = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+      arr1.sort(function (a, b) {
+        return a - b; //如果a大于b，则b在前。小的在前、
+      });
+      console.log(arr1);
+
+      //从大到小
+      var arr2 = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+      arr2.sort(function (a, b) {
+        return b - a; //如果b大于a，则b在前。大的在前。
+      });
+      console.log(arr2);
+
+      //字母顺序a-z
+      var arr3 = ["apple", "dog", "cat", "car", "zoo", "orange", "airplane"];
+      arr3.sort();
+      console.log(arr3);
+
+      //字母顺序z-a
+      var arr4 = ["apple", "dog", "cat", "car", "zoo", "orange", "airplane"];
+      arr4.sort(function (a, b) {
+        if (a < b) {
+          return 1; //如果b大，b在前。
+        }
+        if (a > b) {
+          return -1; //如果a大，a在前。
+        }
+      });
+      console.log(arr4);
+
+      //按照每个元素中第二个数从大到小的顺序进行排序输出
+      var arr5 = [
+        [10, 14],
+        [16, 60],
+        [7, 44],
+        [26, 35],
+        [22, 63],
+      ];
+      arr5.sort(function (a, b) {
+        return b[1] - a[1];
+      });
+      console.log(arr5);
+
+      //按元素对象的value值从小到大进行排序后输出
+      var arr6 = [
+        {
+          id: 1,
+          name: "candy",
+          value: 40,
+        },
+        {
+          id: 2,
+          name: "Simon",
+          value: 50,
+        },
+        {
+          id: 3,
+          name: "Tony",
+          value: 45,
+        },
+        {
+          id: 4,
+          name: "Annie",
+          value: 60,
+        },
+      ];
+      arr6.sort((a, b) => a.value - b.value);
+      console.log(arr6);
+    </script>
+  </body>
+</html>
