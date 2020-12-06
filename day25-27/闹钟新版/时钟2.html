@@ -1,0 +1,91 @@
+<html>
+  <body>
+    <div></div>
+    <script>
+      var div = document.querySelector("div");
+      var today = new Date();
+      var day = today.getDay();
+      function nDay(i) {
+        //根据某个日期返回这一天是星期几
+        switch (i) {
+          case 0:
+            return "Sunday";
+          case 1:
+            return "monday";
+          case 2:
+            return "Tuesday";
+          case 3:
+            return "Wednesday";
+          case 4:
+            return "Thursday";
+          case 5:
+            return "Friday";
+          case 6:
+            return "Saturday";
+        }
+      }
+      function checkTime(i) {
+        //补充0
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+      function packing() {
+        var today = new Date();
+        var day = today.getDay();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var year = today.getFullYear();
+        var month = today.getMonth();
+        var date = today.getDate();
+        h = checkTime(h);
+        h = checkHour(h);
+        m = checkTime(m);
+        s = checkTime(s);
+        ap = checkAp(h);
+        day = nDay(day);
+        month = checkTime(month);
+        date = checkTime(date);
+        div.textContent =
+          year +
+          "-" +
+          month +
+          "-" +
+          date +
+          " " +
+          day +
+          " " +
+          h +
+          ":" +
+          m +
+          ":" +
+          s + 
+          " " + 
+          ap;
+      }
+      function startTime() {
+        packing();
+        t = setTimeout("startTime()", 500);
+      }
+      function checkHour(i) {
+        //将24小时制转化为12小时制
+        if (i >= 12) {
+          i = i - 12;
+        }
+        return i;
+      }
+      function checkAp(i) {
+        //控制AM和PM的选择
+        if (i >= 12) {
+          return "PM";
+        } else {
+          return "AM";
+        }
+      }
+
+      startTime();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<html>
+  <body>
+    <div></div>
+    <div class="second"></div>
+    <script>
+      var div1 = document.querySelector("div");
+      var today = new Date();
+      var day = today.getDay();
+      function nDay1(i) {
+        //根据某个日期返回这一天是星期几
+        switch (i) {
+          case 0:
+            return "星期日";
+          case 1:
+            return "星期一";
+          case 2:
+            return "星期二";
+          case 3:
+            return "星期三";
+          case 4:
+            return "星期四";
+          case 5:
+            return "星期五";
+          case 6:
+            return "星期六";
+        }
+      }
+      function checkTime(i) {
+        //补充0
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+      function packing1() {
+        var today = new Date();
+        var day = today.getDay();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var year = today.getFullYear();
+        var month = today.getMonth();
+        var date = today.getDate();
+        h = checkTime(h);
+        m = checkTime(m);
+        s = checkTime(s);
+        day = nDay1(day);
+        month = checkTime(month);
+        date = checkTime(date);
+        div1.textContent =
+          year +
+          "年" +
+          month +
+          "月" +
+          date +
+          "日" +
+          day +
+          " " +
+          h +
+          ":" +
+          m +
+          ":" +
+          s;
+      }
+      function startTime1() {
+        packing1();
+        t = setTimeout("startTime1()", 500);
+      }
+      startTime1();
+
+      var div2 = document.querySelector(".second");
+      function nDay2(i) {
+        //根据某个日期返回这一天是星期几
+        switch (i) {
+          case 0:
+            return "Sunday";
+          case 1:
+            return "monday";
+          case 2:
+            return "Tuesday";
+          case 3:
+            return "Wednesday";
+          case 4:
+            return "Thursday";
+          case 5:
+            return "Friday";
+          case 6:
+            return "Saturday";
+        }
+      }
+      function packing2() {
+        var today = new Date();
+        var day = today.getDay();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var year = today.getFullYear();
+        var month = today.getMonth();
+        var date = today.getDate();
+        h = checkTime(h);
+        h = checkHour(h);
+        m = checkTime(m);
+        s = checkTime(s);
+        ap = checkAp(h);
+        day = nDay2(day);
+        month = checkTime(month);
+        date = checkTime(date);
+        div2.textContent =
+          year +
+          "-" +
+          month +
+          "-" +
+          date +
+          " " +
+          day +
+          " " +
+          h +
+          ":" +
+          m +
+          ":" +
+          s +
+          " " +
+          ap;
+      }
+      function startTime2() {
+        packing2();
+        t = setTimeout("startTime2()", 500);
+      }
+      function checkHour(i) {
+        //将24小时制转化为12小时制
+        if (i >= 12) {
+          i = i - 12;
+        }
+        return i;
+      }
+      function checkAp(i) {
+        //控制AM和PM的选择
+        if (i >= 12) {
+          return "PM";
+        } else {
+          return "AM";
+        }
+      }
+      startTime2();
+    </script>
+  </body>
+</html>

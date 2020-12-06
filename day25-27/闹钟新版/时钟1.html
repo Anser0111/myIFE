@@ -1,0 +1,71 @@
+<html>
+  <body>
+    <div></div>
+    <script>
+      var div = document.querySelector("div");
+      var today = new Date();
+      var day = today.getDay();
+      function nDay(i) {
+        //根据某个日期返回这一天是星期几
+        switch (i) {
+          case 0:
+            return "星期日";
+          case 1:
+            return "星期一";
+          case 2:
+            return "星期二";
+          case 3:
+            return "星期三";
+          case 4:
+            return "星期四";
+          case 5:
+            return "星期五";
+          case 6:
+            return "星期六";
+        }
+      }
+      function checkTime(i) {
+        //补充0
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+      function packing() {
+        var today = new Date();
+        var day = today.getDay();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var year = today.getFullYear();
+        var month = today.getMonth();
+        var date = today.getDate();
+        h = checkTime(h);
+        m = checkTime(m);
+        s = checkTime(s);
+        day = nDay(day);
+        month = checkTime(month);
+        date = checkTime(date);
+        div.textContent =
+          year +
+          "年" +
+          month +
+          "月" +
+          date +
+          "日" +
+          day +
+          " " +
+          h +
+          ":" +
+          m +
+          ":" +
+          s;
+      }
+      function startTime() {
+        packing();
+        t = setTimeout("startTime()", 500);
+      }
+      startTime();
+    </script>
+  </body>
+</html>
