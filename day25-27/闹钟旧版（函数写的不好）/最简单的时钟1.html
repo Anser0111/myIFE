@@ -1,0 +1,54 @@
+<html>
+  <body>
+    <div id="txt"></div>
+    <script type="text/javascript">
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var year = today.getFullYear();
+        var month = today.getMonth();
+        var date = today.getDate();
+        var day = today.getDay();
+        var weekday = [
+          "星期日",
+          "星期一",
+          "星期二",
+          "星期三",
+          "星期四",
+          "星期五",
+          "星期六",
+        ];
+        // add a zero in front of numbers<10
+        h = checkTime(h);
+        m = checkTime(m);
+        s = checkTime(s);
+        month = checkTime(month);
+        date = checkTime(date);
+        document.getElementById("txt").innerHTML =
+          year +
+          "年" +
+          month +
+          "月" +
+          date +
+          "日" +
+          weekday[day] +
+          h +
+          ":" +
+          m +
+          ":" +
+          s;
+        t = setTimeout("startTime()", 500);
+      }
+
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+      startTime()
+    </script>
+  </body>
+</html>

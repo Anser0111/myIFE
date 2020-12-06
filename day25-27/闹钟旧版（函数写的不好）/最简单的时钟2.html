@@ -1,0 +1,74 @@
+<html>
+  <body>
+    <div id="txt"></div>
+    <script type="text/javascript">
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var year = today.getFullYear();
+        var month = today.getMonth();
+        var date = today.getDate();
+        var day = today.getDay();
+        var weekday = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        ap = "";
+
+        h = checkTime(h);
+        ap = checkAp(h);
+        h = checkHour(h);
+        m = checkTime(m);
+        s = checkTime(s);
+        month = checkTime(month);
+        date = checkTime(date);
+        document.getElementById("txt").innerHTML =
+          year +
+          "-" +
+          month +
+          "-" +
+          date +
+          " " +
+          weekday[day] +
+          " " +
+          h +
+          ":" +
+          m +
+          ":" +
+          s +
+          " " +
+          ap;
+        t = setTimeout("startTime()", 500);
+      }
+
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+
+      function checkHour(i) {
+        if (i >= 12) {
+          i = i - 12;
+        }
+        return i;
+      }
+      function checkAp(i) {
+        if (i >= 12) {
+          return "PM"
+        } else {
+          return "AM"
+        }
+      }
+      startTime();
+    </script>
+  </body>
+</html>
