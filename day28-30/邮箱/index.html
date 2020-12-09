@@ -2,13 +2,7 @@
   <body>
     <div class="wrapper">
       <input id="email-input" type="text" />
-      <ul id="email-sug-wrapper" class="email-sug">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+      <ul id="email-sug-wrapper" class="email-sug"></ul>
     </div>
     <script>
       var postfixList = [
@@ -20,12 +14,7 @@
       ];
       var input = document.querySelector("#email-input");
       var ul = document.querySelector("#email-sug-wrapper");
-
       input.oninput = function () {
-        for (i = 1; i <= 5; i++) {
-          var li = document.querySelector("li");
-          ul.removeChild(li);
-        }
         var trim = getInput();
         //console.log(trim);
         var tips = generateTips();
@@ -51,6 +40,12 @@
       }
       function addTips() {
         var tips = generateTips();
+        if (ul.children.length >= 5) {
+          for (i = 1; i <= 5; i++) {
+            var li = document.querySelector("li");
+            ul.removeChild(li);
+          }
+        }
         for (i = 0; i < postfixList.length; i++) {
           ul.appendChild(tips[i]);
         }
