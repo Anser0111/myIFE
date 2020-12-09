@@ -1,0 +1,52 @@
+<html>
+  <body>
+    <div class="wrapper">
+      <input id="email-input" type="text" />
+      <ul id="email-sug-wrapper" class="email-sug"></ul>
+    </div>
+    <script>
+      var postfixList = [
+        "163.com",
+        "gmail.com",
+        "126.com",
+        "qq.com",
+        "263.net",
+      ];
+      var input = document.querySelector("#email-input");
+      var ul = document.querySelector("#email-sug-wrapper");
+
+      input.oninput = function () {
+        var trim = getInput();
+        console.log(trim);
+        var tips = generateTips();
+        console.log(tips);
+        addTips();
+        //controlTips();
+        //hideTips();
+        //displayTips();
+      };
+      function getInput() {
+        var i = document.querySelector("#email-input").value;
+        i = i.replace(/\s+/g, "");
+        return i;
+      }
+      function generateTips() {
+        var trim = getInput();
+        var liContent = new Array();
+        for (i = 0; i < postfixList.length; i++) {
+          liContent[i] = trim + "@" + postfixList[i - 1];
+        }
+        return liContent;
+      }
+      function addTips() {
+        var li = new Array();
+        var tips = generateTips();
+        for (i = 0; i < postfixList.length; i++) {
+          li[i] = document.createElement("li");
+          li[i].textContent = tips[i];
+          ul.appendChild(li[i]);
+        }
+      }
+    </script>
+  </body>
+</html>
