@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+    <style>
+        .email-sug {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            width: 150px;
+            height: 22px;
+            line-height: 22px;
+            font-size: 14px;
+        }
+ 
+        li:hover {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="wrapper">
+        <input id="email-input" type="text">
+        <ul id="email-sug-wrapper" class="email-sug"></ul>
+    </div>
+ 
+    <script>
+        var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
+        var input = document.getElementById("email-input");
+        var ul = document.getElementById("email-sug-wrapper");
+ 
+        input.oninput = function () {
+            getInput();
+            addPrompt();
+            displayOrHide();
+        };
+ 
+        ul.onclick = function (e) {
+            var ev = e || window.event;　　　　
+            var target = ev.target || ev.srcElement;
+            if (target.nodeName.toUpperCase() == 'LI') {
+                input.value = target.innerText;
+                hide();
+            }
+        }
+ 
+        function getInput() {
+            //拿到input输入框的输入内容trim后返回
+            var input1 = input.value;
+            return input1.trim();
+        }
+ 
+        //生成提示框中的提示内容
+        function setPrompt() {
+            var input1 = getInput();
+            var input2, input3;
+            var flag = 0; //“@”后的字符串能否在postfixList中找到匹配
+            if (input1.indexOf("@") == -1) {
+                input2 = input1;
+            } else {
+                input2 = input1.slice(0, input1.indexOf("@"));
+                input3 = input1.slice(input1.indexOf("@") + 1);
+                console.log(input3)
+            }
+            var res = new Array();
+            for (var i = 0; i < postfixList.length; i++) {
+                if (postfixList[i].indexOf(input3) == 0) {
+                    res[i] = input2 + '@' + postfixList[i];
+                    flag = 1;
+                    console.log(res)
+                }
+            }
+            if (flag == 0) {
+                for (var i = 0; i < postfixList.length; i++) {
+                    res[i] = input2 + '@' + postfixList[i];
+                }
+            }
+            //去除res数组中的空值
+            for (var i = 0; i < res.length; i++) {
+                if (typeof res[i] == "undefined" || res[i] == "") {
+                    res.splice(i, 1);
+                    i--;
+                }
+            }
+            return res;
+        }
+ 
+        function addPrompt() {
+            var prompt = setPrompt();
+            var len = ul.childNodes.length;
+            //removechild()正常的删除全部节点，应该从后面往前删除。
+            //原因是当你把索引为0的子节点删除后，那么原来索引为1节点此时它的索引变成0了，而这时变量i已经变成1了，程序继续走时就会删除原先索引为２的现在为1的节点，这样程序运行的结果就是只删除了一半的子节点。
+            for (var i = len - 1; i >= 0; i--) {
+                ul.removeChild(ul.childNodes[i]);
+            }
+            for (var i = 0; i < prompt.length; i++) {
+                var li = document.createElement('li');
+                li.innerHTML = prompt[i];
+                ul.appendChild(li);
+            }
+        }
+ 
+        function displayOrHide() {
+            var input1 = getInput();
+            if (input1 == "") {
+                hide();
+            } else {
+                display();
+            }
+        }
+ 
+        function hide() {
+            ul.style.display = "none";
+        }
+ 
+        function display() {
+            ul.style.display = "block";
+        }
+    </script>
+</body>
+ 
+</html>
