@@ -17,6 +17,10 @@ function getInput() {
 function generateTips() {
   var trim = getInput();
   var liContent = new Array();
+  if (trim.indexOf("@") != -1) {
+    var symbolPosition = trim.indexOf("@");
+    trim = trim.slice(0, symbolPosition);
+  }
   for (i = 0; i < postfixList.length; i++) {
     liContent[i] = document.createElement("li");
     liContent[i].textContent = trim + "@" + postfixList[i - 1];
