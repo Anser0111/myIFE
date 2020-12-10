@@ -20,6 +20,9 @@ function generateTips() {
   if (trim.indexOf("@") != -1) {
     var symbolPosition = trim.indexOf("@");
     trim = trim.slice(0, symbolPosition);
+    var behind = getInput();
+    behind = behind.slice(symbolPosition + 1);
+    console.log(behind);
   }
   for (i = 0; i < postfixList.length; i++) {
     liContent[i] = document.createElement("li");
