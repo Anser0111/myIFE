@@ -23,7 +23,7 @@ function generateTips() {
   }
   for (i = 0; i < postfixList.length; i++) {
     liContent[i] = document.createElement("li");
-    liContent[i].textContent = trim + "@" + postfixList[i - 1];
+    liContent[i].textContent = trim + "@" + postfixList[i];
   }
   return liContent;
 }
