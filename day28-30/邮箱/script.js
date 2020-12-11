@@ -25,20 +25,26 @@ function generateTips() {
     console.log(behind);
   }
   for (i = 0; i < postfixList.length; i++) {
-    liContent[i] = document.createElement("li");
-    liContent[i].textContent = trim + "@" + postfixList[i];
+    if (postfixList[i].indexOf(behind) == 0) {
+      liContent.push(document.createElement("li"));
+      liContent[liContent.length - 1].textContent = trim + "@" + postfixList[i];
+    }
+    if (behind == null) {
+      liContent[i] = document.createElement("li");
+      liContent[i].textContent = trim + "@" + postfixList[i];
+    }
   }
   return liContent;
 }
 function addTips() {
   var tips = generateTips();
-  if (ul.children.length >= postfixList.length) {
-    for (i = 0; i < postfixList.length; i++) {
+  if (ul.children.length >= tips.length) {
+    for (i = 0, j = ul.children.length; i < j; i++) {
       var li = document.querySelector("li");
       ul.removeChild(li);
     }
   }
-  for (i = 0; i < postfixList.length; i++) {
+  for (i = 0; i < tips.length; i++) {
     ul.appendChild(tips[i]);
   }
 }
@@ -53,13 +59,15 @@ function controlTips() {
   }
 }
 function hideTips() {
-  for (i = 0; i < postfixList.length; i++) {
+  var tips = generateTips();
+  for (i = 0; i < tips.length; i++) {
     var li = document.querySelectorAll("li");
     li[i].style.display = "none";
   }
 }
 function displayTips() {
-  for (i = 0; i < postfixList.length; i++) {
+  var tips = generateTips();
+  for (i = 0; i < tips.length; i++) {
     var li = document.querySelectorAll("li");
     li[i].style.display = "block";
   }
