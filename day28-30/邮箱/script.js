@@ -34,6 +34,15 @@ function generateTips() {
       liContent[i].textContent = trim + "@" + postfixList[i];
     }
   }
+  if (behind != null) {
+    if (behind.length >= 7 && liContent.length == 0) {
+      for (i = 0; i < postfixList.length; i++) {
+        liContent[i] = document.createElement("li");
+        liContent[i].textContent = trim + "@" + postfixList[i];
+      }
+    }
+  }
+
   return liContent;
 }
 function addTips() {
