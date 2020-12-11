@@ -95,3 +95,11 @@ function displayTips() {
     li[i].style.display = "block";
   }
 }
+ul.onclick = function (e) {
+  if (e.target.nodeName.toLowerCase() == "li") {
+    hideTips();
+    var source = e.target;
+    var liContent = source.textContent;
+    input.value = liContent;
+  }
+};
