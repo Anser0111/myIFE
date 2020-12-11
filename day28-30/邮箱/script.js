@@ -38,7 +38,7 @@ function generateTips() {
 }
 function addTips() {
   var tips = generateTips();
-  if (ul.children.length >= tips.length) {
+  if (ul.children.length > 0) {
     for (i = 0, j = ul.children.length; i < j; i++) {
       var li = document.querySelector("li");
       ul.removeChild(li);
