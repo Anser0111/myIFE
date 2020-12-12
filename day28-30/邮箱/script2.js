@@ -107,6 +107,7 @@ ul.onclick = function (e) {
     var liContent = source.textContent;
     input.value = liContent;
   }
+  document.querySelector("input").focus();
 };
 input.onkeydown = function (e) {
   if (e.keyCode == 38 || e.keyCode == 40 || e.keyCode == 13) {
@@ -145,8 +146,14 @@ input.onkeydown = function (e) {
       }
     }
   }
+  if (e.keyCode == 27) {
+    document.querySelector("input").select();
+  }
 };
 function reset() {
   //重置选中状态（如果选中的li不是第一个，则选中第一个）
   nowSelectTipIndex = 0;
 }
+window.onload = function () {
+  document.querySelector("input").focus();
+};
