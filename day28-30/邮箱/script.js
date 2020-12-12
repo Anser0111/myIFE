@@ -1,11 +1,15 @@
 var postfixList = ["163.com", "gmail.com", "126.com", "qq.com", "263.net"];
 var input = document.querySelector("#email-input");
 var ul = document.querySelector("#email-sug-wrapper");
-input.oninput = function () {
+input.oninput = function (e) {
   /*var trim = getInput();
     console.log(trim);
     var tips = generateTips();
     console.log(tips);*/
+  if (e.keyCode != 38 && e.keyCode != 40 && e.keyCode != 13) {
+    //如果按的不是上下及回车，重置选中状态
+    reset();
+  }
   addTips(); //添加提示
   controlTips(); //控制提示
 };
@@ -70,6 +74,11 @@ function addTips() {
     //添加提示
     ul.appendChild(tips[i]);
   }
+  if (ul.children.length > 0) {
+    //如果有提示，把第一条设置为选中状态
+    var sli = document.querySelector("li");
+    sli.style.backgroundColor = "red";
+  }
 }
 function controlTips() {
   var trim = getInput();
@@ -103,3 +112,51 @@ ul.onclick = function (e) {
     input.value = liContent;
   }
 };
+input.onkeydown = function (e) {
+  if (e.keyCode == 38 || e.keyCode == 40 || e.keyCode == 13) {
+    //如果按下的是上下或回车
+    if (ul.children.length > 0) {
+      //如果有提示
+      for (i = 0; i < ul.children.length; i++) {
+        var li = document.querySelectorAll("li");
+        if (li[i].style.backgroundColor == "red") {
+          var find = i; //找到选中的li
+          li[i].style.backgroundColor = "white"; //删除掉他的选中状态
+        }
+      }
+      if (e.keyCode == 38) {
+        //如果输入的是上
+        if (find != 0) {
+          li[find - 1].style.backgroundColor = "red";
+        } else {
+          li[ul.children.length - 1].style.backgroundColor = "red";
+        }
+      }
+      if (e.keyCode == 40) {
+        //如果输入的是下
+        if (find != ul.children.length - 1) {
+          li[find + 1].style.backgroundColor = "red";
+        } else {
+          li[0].style.backgroundColor = "red";
+        }
+      }
+      if (e.keyCode == 13) {
+        //如果输入的是回车
+        hideTips();
+        input.value = li[find].textContent;
+      }
+    }
+  }
+};
+function reset() {
+  //重置选中状态（如果选中的li不是第一个，则选中第一个）
+  for (i = 0; i < ul.children.length; i++) {
+    var li = document.querySelectorAll("li");
+    if (li[i].style.backgroundColor == "red") {
+      if (i != 0) {
+        li[i].style.backgroundColor = "white";
+        li[0].style.backgroundColor = "red";
+      }
+    }
+  }
+}
