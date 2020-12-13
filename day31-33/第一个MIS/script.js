@@ -49,10 +49,20 @@ var select1 = document.querySelector("#region-select");
 var options1 = document
   .querySelector("#region-select")
   .querySelectorAll("option");
+var select2 = document.querySelector("#product-select");
+var options2 = document
+  .querySelector("#product-select")
+  .querySelectorAll("option");
+
 select1.onchange = function () {
   rendering(getData1());
 };
-
+select2.onchange = function () {
+  rendering(getData1());
+};
+window.onload = function () {
+  rendering(getData1());
+};
 function findSelected(k) {
   for (i = 0; i <= k.length - 1; i++) {
     if (k[i].selected == true) {
@@ -63,20 +73,39 @@ function findSelected(k) {
 function getData1() {
   var dataArray = new Array();
   var sRegion = findSelected(options1).value;
+  var sProduct = findSelected(options2).value;
   if (sRegion == "华东") {
-    dataArray.push(sourceData[0]);
-    dataArray.push(sourceData[3]);
-    dataArray.push(sourceData[6]);
+    if (sProduct == "手机") {
+      dataArray.push(sourceData[0]);
+    }
+    if (sProduct == "笔记本") {
+      dataArray.push(sourceData[3]);
+    }
+    if (sProduct == "智能音箱") {
+      dataArray.push(sourceData[6]);
+    }
   }
   if (sRegion == "华北") {
-    dataArray.push(sourceData[1]);
-    dataArray.push(sourceData[4]);
-    dataArray.push(sourceData[7]);
+    if (sProduct == "手机") {
+      dataArray.push(sourceData[1]);
+    }
+    if (sProduct == "笔记本") {
+      dataArray.push(sourceData[4]);
+    }
+    if (sProduct == "智能音箱") {
+      dataArray.push(sourceData[7]);
+    }
   }
   if (sRegion == "华南") {
-    dataArray.push(sourceData[2]);
-    dataArray.push(sourceData[5]);
-    dataArray.push(sourceData[8]);
+    if (sProduct == "手机") {
+      dataArray.push(sourceData[2]);
+    }
+    if (sProduct == "笔记本") {
+      dataArray.push(sourceData[5]);
+    }
+    if (sProduct == "智能音箱") {
+      dataArray.push(sourceData[8]);
+    }
   }
   return dataArray;
 }
