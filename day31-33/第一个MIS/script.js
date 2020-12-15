@@ -45,20 +45,11 @@ let sourceData = [
     sale: [10, 40, 10, 6, 5, 6, 8, 6, 6, 6, 7, 26],
   },
 ];
-var select1 = document.querySelector("#region-select");
-var options1 = document
-  .querySelector("#region-select")
-  .querySelectorAll("option");
-var select2 = document.querySelector("#product-select");
-var options2 = document
-  .querySelector("#product-select")
-  .querySelectorAll("option");
-
-select1.onchange = function () {
-  rendering(getData1());
-};
-select2.onchange = function () {
-  rendering(getData1());
+var body = document.querySelector("body");
+body.onclick = function (e) {
+  if (e.target.nodeName.toLowerCase() == "input") {
+    rendering(getData1());
+  }
 };
 window.onload = function () {
   rendering(getData1());
@@ -72,6 +63,32 @@ function findSelected(k) {
 }
 function getData1() {
   var dataArray = new Array();
+  var checkedArray = new Array(); //选中的内容是什么的数组
+  var eachInput = document.querySelectorAll("input");
+  for (i = 0; i < eachInput.length; i++) {
+    var theInput = eachInput[i];
+    var what = theInput.getAttribute("what");
+    if (theInput.checked == true) {
+      checkedArray.push(what);
+    }
+  }
+  for (i = 0; i < sourceData.length; i++) {
+    //遍历sourceData
+    for (j = 0; j < checkedArray.length; j++) {
+      //遍历checkedArray
+      if (checkedArray[j] == sourceData[i]["product"]) {
+        //如果其中一维条件满足了，在遍历一次，看看另一维条件是否满足
+        for (k = 0; k < checkedArray.length; k++) {
+          if (checkedArray[k] == sourceData[i]["region"]) {
+            //如果也满足了，则添加这个源数据
+            dataArray.push(sourceData[i]);
+          }
+        }
+      }
+    }
+  }
+  //console.log(checkedArray);
+  /*
   var sRegion = findSelected(options1).value;
   var sProduct = findSelected(options2).value;
   if (sRegion == "华东") {
@@ -107,6 +124,7 @@ function getData1() {
       dataArray.push(sourceData[8]);
     }
   }
+  */
   return dataArray;
 }
 
