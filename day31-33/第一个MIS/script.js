@@ -46,7 +46,7 @@ let sourceData = [
   },
 ];
 var body = document.querySelector("body");
-body.onclick = function (e) {
+body.onchange = function (e) {
   if (e.target.nodeName.toLowerCase() == "input") {
     rendering(getData1());
   }
@@ -88,50 +88,17 @@ function getData1() {
     }
   }
   //console.log(checkedArray);
-  /*
-  var sRegion = findSelected(options1).value;
-  var sProduct = findSelected(options2).value;
-  if (sRegion == "华东") {
-    if (sProduct == "手机") {
-      dataArray.push(sourceData[0]);
-    }
-    if (sProduct == "笔记本") {
-      dataArray.push(sourceData[3]);
-    }
-    if (sProduct == "智能音箱") {
-      dataArray.push(sourceData[6]);
-    }
-  }
-  if (sRegion == "华北") {
-    if (sProduct == "手机") {
-      dataArray.push(sourceData[1]);
-    }
-    if (sProduct == "笔记本") {
-      dataArray.push(sourceData[4]);
-    }
-    if (sProduct == "智能音箱") {
-      dataArray.push(sourceData[7]);
-    }
-  }
-  if (sRegion == "华南") {
-    if (sProduct == "手机") {
-      dataArray.push(sourceData[2]);
-    }
-    if (sProduct == "笔记本") {
-      dataArray.push(sourceData[5]);
-    }
-    if (sProduct == "智能音箱") {
-      dataArray.push(sourceData[8]);
-    }
-  }
-  */
   return dataArray;
 }
 
 function rendering(data) {
+  var warpper = document.querySelector("#table-wrapper");
+  if (warpper.children.length > 0) {
+    //新增功能，简历新表单时，删除旧表单。
+    warpper.removeChild(warpper.children[0]);
+  }
   var div = document.querySelector("#table-wrapper");
   var table = document.createElement("table");
-  table.style.border = "1px solid black";
   div.appendChild(table);
   var tr1 = document.createElement("tr");
   table.appendChild(tr1);
