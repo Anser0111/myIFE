@@ -51,9 +51,6 @@ body.onchange = function (e) {
     rendering(getData1());
   }
 };
-window.onload = function () {
-  rendering(getData1());
-};
 function findSelected(k) {
   for (i = 0; i <= k.length - 1; i++) {
     if (k[i].selected == true) {
